@@ -25,8 +25,8 @@ public class DamageHandler : MonoBehaviour {
 			RaycastHit hit;
 			Vector3 fwd = transform.TransformDirection (Vector3.forward);
 			if (Physics.Raycast (transform.position, fwd, out hit, range)) {
-				Debug.Log ("Enemy in: " + hit.distance);
-				HealthHandler handler = hit.collider.GetComponent<HealthHandler>();
+				Debug.Log ("Enemy in: " + hit.distance);				
+				HealthHandler handler = hit.collider.transform.parent.GetComponent<HealthHandler>();
 				if (handler) {
 					DoDamage (hit.collider);
 					Debug.Log ("Damage done, Health left:" + handler.health);

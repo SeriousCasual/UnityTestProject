@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_1_5;UNITY_4_1;ENABLE_PROFILER;UNITY_EDITOR;2</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_2_0;UNITY_4_2;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;2</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -44,20 +44,63 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\JimWest\Entities\Scripts\BaseClasses\Callable.cs" />
-     <Compile Include="Assets\JimWest\Entities\Scripts\BaseClasses\Entity.cs" />
-     <Compile Include="Assets\JimWest\Entities\Scripts\BaseClasses\EntityMethodPair.cs" />
-     <Compile Include="Assets\JimWest\Entities\Scripts\BaseClasses\TriggerBase.cs" />
-     <Compile Include="Assets\JimWest\Entities\Scripts\ButtonLogic.cs" />
-     <Compile Include="Assets\JimWest\Entities\Scripts\Gizmo\GizmoBox.cs" />
-     <Compile Include="Assets\JimWest\Entities\Scripts\Gizmo\GizmoDirection.cs" />
-     <Compile Include="Assets\JimWest\Entities\Scripts\MoveLogic.cs" />
-     <Compile Include="Assets\JimWest\Entities\Scripts\PauseTest.cs" />
-     <Compile Include="Assets\JimWest\Entities\Scripts\Platform.cs" />
-     <Compile Include="Assets\JimWest\Entities\Scripts\TeleportLogic.cs" />
-     <Compile Include="Assets\JimWest\Entities\Scripts\TriggerHurtLogic.cs" />
-     <Compile Include="Assets\JimWest\Entities\Scripts\TriggerLogic.cs" />
-     <Compile Include="Assets\JimWest\Entities\Scripts\TriggerPushLogic.cs" />
+     <Compile Include="Assets\Animator\Files\AnimatorData.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMAction.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMAnimationAction.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMAnimationKey.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMAnimationTrack.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMAudioAction.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMAudioKey.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMAudioTrack.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMCameraSwitcherAction.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMCameraSwitcherKey.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMCameraSwitcherTrack.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMEventAction.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMEventKey.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMEventParameter.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMEventTrack.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMGroup.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMKey.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMOrientationAction.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMOrientationKey.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMOrientationTrack.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMPath.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMPropertyAction.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMPropertyKey.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMPropertyTrack.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMRotationAction.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMRotationKey.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMRotationTrack.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMTake.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMTarget.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMTrack.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMTranslationAction.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMTranslationKey.cs" />
+     <Compile Include="Assets\Animator\Files\Classes\AMTranslationTrack.cs" />
+     <Compile Include="Assets\Animator\Files\Scripts\ClipboardHelper.cs" />
+     <Compile Include="Assets\Animator\Files\Scripts\ComboBox.cs" />
+     <Compile Include="Assets\Animator\Files\Scripts\ObjectCopier.cs" />
+     <Compile Include="Assets\Animator\Plugins\AMCameraFade.cs" />
+     <Compile Include="Assets\Animator\Plugins\AMTween.cs" />
+     <Compile Include="Assets\Animator\Plugins\AnimatorTimeline.cs" />
+     <Compile Include="Assets\JimWest\Scripts\AIScript.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Entities\BaseClasses\Callable.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Entities\BaseClasses\Entity.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Entities\BaseClasses\EntityMethodPair.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Entities\BaseClasses\TriggerBase.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Entities\ButtonLogic.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Entities\CounterLogic.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Entities\Gizmo\GizmoBox.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Entities\Gizmo\GizmoDirection.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Entities\MoveLogic.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Entities\PauseTest.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Entities\PickupableLogic.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Entities\Platform.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Entities\TeleportLogic.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Entities\TimerLogic.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Entities\TriggerHurtLogic.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Entities\TriggerLogic.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Entities\TriggerPushLogic.cs" />
      <Compile Include="Assets\JimWest\Scripts\HUD\BoxHud.cs" />
      <Compile Include="Assets\JimWest\Scripts\HUD\Compass.cs" />
      <Compile Include="Assets\JimWest\Scripts\HUD\EnemyHealthHud.cs" />
@@ -67,9 +110,19 @@
      <Compile Include="Assets\JimWest\Scripts\Handlers\DamageHandler.cs" />
      <Compile Include="Assets\JimWest\Scripts\Handlers\HealthHandler.cs" />
      <Compile Include="Assets\JimWest\Scripts\Utilities\Utility.cs" />
+     <None Include="Assets\Animator\Files\Resources\AMIrisShape.shader" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
+     <None Include="Assets\Animator\changelog.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
+ </Reference>
+ <Reference Include="JsonFx.Json">
+ <HintPath>Assets\Animator\Files\Scripts\JsonFx.Json.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
