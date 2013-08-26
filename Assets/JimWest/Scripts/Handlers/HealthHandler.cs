@@ -1,8 +1,10 @@
 using UnityEngine;
 using System.Collections;
 
-public class HealthHandler : MonoBehaviour {
-	
+[RequireComponent (typeof (Collider))]
+
+public class HealthHandler : MonoBehaviour {	
+		
 	public int maxHealth = 100;
 	public int health = 100;
 	

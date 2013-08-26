@@ -66,8 +66,9 @@ namespace Utility
 		}
 		
 		public static int GetMaxHealth(GameObject entity){
-				return 	entity.GetComponent<HealthHandler>().maxHealth;
+				return 	entity.GetComponent<HealthHandler>().maxHealth;		
 		}
+		
 		
 	}
 	

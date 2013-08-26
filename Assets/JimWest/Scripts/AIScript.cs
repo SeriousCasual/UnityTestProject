@@ -13,6 +13,8 @@ public class AIScript : MonoBehaviour {
 	}
 	
 	void Update () {
-		myAgent.destination = target.position;
+		if (target) {
+			myAgent.destination = target.position;
+		}
 	}
 }

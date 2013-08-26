@@ -93,7 +93,6 @@
      <Compile Include="Assets\JimWest\Scripts\Entities\Gizmo\GizmoBox.cs" />
      <Compile Include="Assets\JimWest\Scripts\Entities\Gizmo\GizmoDirection.cs" />
      <Compile Include="Assets\JimWest\Scripts\Entities\MoveLogic.cs" />
-     <Compile Include="Assets\JimWest\Scripts\Entities\PauseTest.cs" />
      <Compile Include="Assets\JimWest\Scripts\Entities\PickupableLogic.cs" />
      <Compile Include="Assets\JimWest\Scripts\Entities\Platform.cs" />
      <Compile Include="Assets\JimWest\Scripts\Entities\TeleportLogic.cs" />
@@ -109,6 +108,8 @@
      <Compile Include="Assets\JimWest\Scripts\HUD\SpeedHud.cs" />
      <Compile Include="Assets\JimWest\Scripts\Handlers\DamageHandler.cs" />
      <Compile Include="Assets\JimWest\Scripts\Handlers\HealthHandler.cs" />
+     <Compile Include="Assets\JimWest\Scripts\HurtTest.cs" />
+     <Compile Include="Assets\JimWest\Scripts\PlayerControll\RigidPlayerScript.cs" />
      <Compile Include="Assets\JimWest\Scripts\Utilities\Utility.cs" />
      <None Include="Assets\Animator\Files\Resources\AMIrisShape.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
