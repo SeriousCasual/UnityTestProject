@@ -37,26 +37,20 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>E:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>E:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\JimWest\Scripts\PlayerControll\CameraControl.js" />
-     <Compile Include="Assets\JimWest\Scripts\PlayerControll\FreeMovementMotor.js" />
-     <Compile Include="Assets\JimWest\Scripts\PlayerControll\HoverMovementMotor.js" />
-     <Compile Include="Assets\JimWest\Scripts\PlayerControll\Joystick.js" />
-     <Compile Include="Assets\JimWest\Scripts\PlayerControll\KamikazeMovementMotor.js" />
-     <Compile Include="Assets\JimWest\Scripts\PlayerControll\MechMovementMotor.js" />
-     <Compile Include="Assets\JimWest\Scripts\PlayerControll\MovementMotor.js" />
-     <Compile Include="Assets\JimWest\Scripts\PlayerControll\PlayerMoveController.js" />
+     <Compile Include="Assets\GameJam\Scripts\Weapons\AutoFire.js" />
      <None Include="Assets\Animator\Files\Resources\AMIrisShape.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
+     <None Include="Assets\JimWest\Shaders\Additive.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
      <None Include="Assets\Animator\changelog.txt" />

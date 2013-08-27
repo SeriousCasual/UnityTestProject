@@ -1,14 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\JimWest\Scripts\PlayerControll\RigidPlayerScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\JimWest\Scripts\Handlers\HealthHandler.cs">
     <Files>
-      <File FileName="Assets\JimWest\Scripts\Handlers\HealthHandler.cs" Line="5" Column="1" />
-      <File FileName="Assets\JimWest\Scripts\PlayerControll\RigidPlayerScript.cs" Line="16" Column="30" />
+      <File FileName="Assets\JimWest\Scripts\Weapons\WeaponScript.cs" Line="61" Column="69" />
+      <File FileName="Assets\JimWest\Scripts\PlayerControll\RigidPlayerScript.cs" Line="66" Column="8" />
+      <File FileName="Assets\JimWest\Scripts\Handlers\HealthHandler.cs" Line="53" Column="40" />
+      <File FileName="Assets\JimWest\Scripts\Weapons\SimpleBullet.cs" Line="27" Column="1" />
+      <File FileName="Assets\JimWest\Scripts\AIScript.cs" Line="6" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="C:\Users\Jim\Unity\New_Test\Assets\JimWest\Scripts\Utilities\Utility.cs" line="69" />
+      <Breakpoint file="C:\Users\Jim\Unity\New_Test\Assets\GameJam\Scripts\Weapons\WeaponScript.cs" line="45" />
+      <Breakpoint file="C:\Users\Jim\Unity\New_Test\Assets\JimWest\Scripts\Handlers\HealthHandler.cs" line="48" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

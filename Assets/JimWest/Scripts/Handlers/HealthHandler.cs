@@ -13,11 +13,10 @@ public class HealthHandler : MonoBehaviour {
 	private float nextRegen = 0.0f;
 	
 	public bool invincible = false;
-	public bool dead = false;
-
-
-	void Start () {
+	public bool dead = false;	
+	public GameObject destroyPrefab;
 	
+	void Start () {
 	}
 	
 	void Update () {
@@ -50,6 +49,14 @@ public class HealthHandler : MonoBehaviour {
 		}
 		
 		dead = this.health <= 0;
+		
+		if (dead & gameObject.tag != "Player") {
+			if (destroyPrefab) {
+				GameObject test = (GameObject)Instantiate(destroyPrefab, transform.position, transform.rotation);
+				Destroy (test, 0.5f);				
+			}
+			Destroy(gameObject);
+		}
 			
 		// returns true if died
 		return dead;

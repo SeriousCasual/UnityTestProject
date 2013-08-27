@@ -33,18 +33,11 @@ public class RigidPlayerScript : MonoBehaviour {
 			//************************************
 			// Rotation
 			//************************************
-			
-			// search point from the mouse on the plane too look at it
-			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);			
-			RaycastHit hit;
-			if (Physics.Raycast (ray, out hit)) {
-				lookTarget = hit.point;
-			}
- 
-			// rotate towards target
-			Vector3 lookDelta = (hit.point-transform.position);
+						
+			// rotate towards target		
+			Vector3 lookDelta = (GetMouseOnPlane()-transform.position);
 			Quaternion targetRot = Quaternion.LookRotation(lookDelta);
-			
+					
 			// only rotate around y axis
 			targetRot.x = 0;
 			targetRot.z = 0;
@@ -68,21 +61,35 @@ public class RigidPlayerScript : MonoBehaviour {
 	        velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
 	        velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
 	        velocityChange.y = 0;
-	        rigidbody.AddForce(velocityChange, ForceMode.VelocityChange); 
+	        rigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
 			
-			//MoveCamera
-			if (mainCamera) {
-				Vector3 tempPos = this.transform.position + centerOffset;
-				mainCamera.transform.position = tempPos;
-			}
-			
-	    } 
+	    } 		
+					
+		//MoveCamera
+		if (mainCamera) {
+			Vector3 tempPos = this.transform.position + centerOffset;
+			mainCamera.transform.position = tempPos;
+		}
  
 	    grounded = false;
 	}
  
 	void OnCollisionStay () {
 	    grounded = true;    
+	}
+	
+	public Vector3 GetMouseOnPlane() {					
+		// search point from the mouse on the plane too look at it
+		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);			
+		RaycastHit hit;
+		if (Physics.Raycast (ray, out hit)) {
+			return hit.point;
+		} else {
+			Vector3 position = Input.mousePosition;
+			position.y = transform.position.y;
+			return position;	
+		}
+
 	}
  
 	float CalculateJumpVerticalSpeed () {

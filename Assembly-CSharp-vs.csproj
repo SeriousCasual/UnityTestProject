@@ -37,10 +37,10 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>E:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>E:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +90,7 @@
      <Compile Include="Assets\JimWest\Scripts\Entities\BaseClasses\TriggerBase.cs" />
      <Compile Include="Assets\JimWest\Scripts\Entities\ButtonLogic.cs" />
      <Compile Include="Assets\JimWest\Scripts\Entities\CounterLogic.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Entities\EnemySpawnerLogic.cs" />
      <Compile Include="Assets\JimWest\Scripts\Entities\Gizmo\GizmoBox.cs" />
      <Compile Include="Assets\JimWest\Scripts\Entities\Gizmo\GizmoDirection.cs" />
      <Compile Include="Assets\JimWest\Scripts\Entities\MoveLogic.cs" />
@@ -111,11 +112,14 @@
      <Compile Include="Assets\JimWest\Scripts\HurtTest.cs" />
      <Compile Include="Assets\JimWest\Scripts\PlayerControll\RigidPlayerScript.cs" />
      <Compile Include="Assets\JimWest\Scripts\Utilities\Utility.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Weapons\SimpleBullet.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Weapons\WeaponScript.cs" />
      <None Include="Assets\Animator\Files\Resources\AMIrisShape.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
+     <None Include="Assets\JimWest\Shaders\Additive.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
      <None Include="Assets\Animator\changelog.txt" />
