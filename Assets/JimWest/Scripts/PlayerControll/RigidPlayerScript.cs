@@ -28,6 +28,11 @@ public class RigidPlayerScript : MonoBehaviour {
 	}
  
 	void FixedUpdate () {
+		
+		if (Input.GetKeyDown (KeyCode.F1)) {
+			Application.LoadLevel(Application.loadedLevel);	
+		}
+		
 	    if (grounded) {			
 			
 			//************************************
