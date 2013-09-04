@@ -1,25 +1,26 @@
 using UnityEngine;
 using System.Collections;
 
-[RequireComponent (typeof (Collider))]
+[RequireComponent (typeof(Collider))]
 
-public class HealthHandler : MonoBehaviour {	
+public class HealthHandler : MonoBehaviour
+{	
 		
 	public int maxHealth = 100;
 	public int health = 100;
-	
 	public int regenHealth = 0;
 	public float regenSpeed = 1f;
 	private float nextRegen = 0.0f;
-	
 	public bool invincible = false;
-	public bool dead = false;	
+	public bool dead = false;
 	public GameObject destroyPrefab;
 	
-	void Start () {
+	void Start ()
+	{
 	}
 	
-	void Update () {
+	void Update ()
+	{
 		if (regenHealth > 0) {
 			
 			if (health < maxHealth) {				
@@ -37,29 +38,45 @@ public class HealthHandler : MonoBehaviour {
 		}
 	}
 	
-	public void AddHealth(int health) {		
+	public void AddHealth (int health)
+	{		
 		// not greater than maxHealth
 		this.health = Mathf.Min (this.health + health, maxHealth);		
 	}
 	
-	public bool DeductHealth(int damage) {	
+	public bool DeductHealth (int damage)
+	{	
 		if (!invincible) {
 			// no negative health
 			this.health = Mathf.Max (this.health - damage, 0);
 		}
 		
-		dead = this.health <= 0;
+		this.dead = this.health <= 0;
 		
 		if (dead & gameObject.tag != "Player") {
 			if (destroyPrefab) {
-				GameObject test = (GameObject)Instantiate(destroyPrefab, transform.position, transform.rotation);
+				GameObject test = (GameObject)Instantiate (destroyPrefab, transform.position, transform.rotation);
 				Destroy (test, 0.5f);				
 			}
-			Destroy(gameObject);
+			Destroy (gameObject);
 		}
 			
 		// returns true if died
 		return dead;
 	}
-
+	
+	public int GetHealth ()
+	{
+		return this.health;
+	}
+	
+	public int GetMaxHealth ()
+	{
+		return this.maxHealth;
+	}
+	
+	public bool GetIsAlive ()
+	{
+		return !this.dead;
+	}
 }

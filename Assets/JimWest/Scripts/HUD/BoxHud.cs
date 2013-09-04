@@ -16,12 +16,23 @@ public class BoxHud : Hud
 		color = new Color(1,0,0,1);
 	}
 	
+	/// <summary>
+	/// Is this GUI visible?
+	/// </summary>
+	/// <value>
+	/// <c>true</c> if visible; otherwise, <c>false</c>.
+	/// </value>
+	public bool Visible { get; set; }
+	
 	public virtual void OnGUI() {
-		rect.width = GetWidth ();
-		style = GUI.skin.box;
-		GUI.backgroundColor = GetColor();
-		style.normal.background = texture;
-		GUI.Box (rect , GetText(), style);
+		if (this.Visible)
+		{
+			rect.width = GetWidth ();
+			style = GUI.skin.box;
+			GUI.backgroundColor = GetColor();
+			style.normal.background = texture;
+			GUI.Box (rect , GetText(), style);
+		}
 	}
 		
 	public virtual float GetWidth() {

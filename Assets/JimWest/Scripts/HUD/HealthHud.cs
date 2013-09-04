@@ -20,7 +20,22 @@ public class HealthHud : BoxHud {
 	public override string GetText (){
 		int maxHealth = Utility.HealthUtility.GetMaxHealth (player);
 		int health = Utility.HealthUtility.GetHealth (player);
-		return ( maxHealth + "/" + health);
+		return ( health + "/" + maxHealth);
+	}
+	
+	public override void OnGUI ()
+	{
+		bool alive = Utility.HealthUtility.GetIsAlive(player);
+		if (!alive)
+		{
+			this.Visible = false;
+		}
+		else
+		{
+			this.Visible = true;
+		}
+		
+		base.OnGUI();
 	}
 
 }
