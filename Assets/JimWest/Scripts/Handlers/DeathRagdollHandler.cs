@@ -5,7 +5,7 @@ using System.Collections;
 
 public class DeathRagdollHandler : MonoBehaviour {
 
-	public bool ragdolling;
+	public bool ragdolling = false;
 	public float ragdollDuration = 1.5f;
 	public DateTime ragdollStopTime = DateTime.MinValue;
 	
@@ -13,12 +13,20 @@ public class DeathRagdollHandler : MonoBehaviour {
 	{
 		if (this.ragdolling && DateTime.Now >= this.ragdollStopTime)
 		{
+			// Stop Ragdolling and destroy self.
 		}
 	}
 	
 	void StartRagdoll()
 	{
 		this.ragdollStopTime = DateTime.Now + this.ragdollStopTime;
+		
+		// Start ragdolling and suppress input
+	}
+	
+	public bool GetIsRagdolling()
+	{
+		return ragdolling;
 	}
 	
 }
