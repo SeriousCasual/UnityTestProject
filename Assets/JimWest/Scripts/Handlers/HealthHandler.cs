@@ -12,8 +12,7 @@ public class HealthHandler : MonoBehaviour {
 	public float regenSpeed = 1f;
 	private float nextRegen = 0.0f;
 	
-	public bool invincible = false;
-	public bool dead = false;	
+	public bool invincible = false;	
 	public GameObject destroyPrefab;
 	
 	void Start () {
@@ -60,6 +59,11 @@ public class HealthHandler : MonoBehaviour {
 			
 		// returns true if died
 		return dead;
+	}
+	
+	public bool GetIsAlive()
+	{
+		return !this.dead
 	}
 
 }
