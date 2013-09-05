@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{FFDD2BF5-005A-6D2F-49A6-76C9C061F453}</ProjectGuid>
+	<ProjectGuid>{D4FBC9A4-3CD9-27A1-81D3-E604DE5C7339}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -37,10 +37,10 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>E:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>E:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -110,6 +110,7 @@
      <Compile Include="Assets\JimWest\Scripts\Handlers\DamageHandler.cs" />
      <Compile Include="Assets\JimWest\Scripts\Handlers\HealthHandler.cs" />
      <Compile Include="Assets\JimWest\Scripts\HurtTest.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Library\ExposePropertyAttribute.cs" />
      <Compile Include="Assets\JimWest\Scripts\PlayerControll\RigidPlayerScript.cs" />
      <Compile Include="Assets\JimWest\Scripts\Utilities\Utility.cs" />
      <Compile Include="Assets\JimWest\Scripts\Weapons\SimpleBullet.cs" />
@@ -129,9 +130,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{7B11A57F-E927-4B44-4087-D2452A258B27}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{B9A92694-36B7-114E-8659-141E10708892}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
-      <Project>{1A8BA835-D5DB-94DC-1243-ADAD8C31B523}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+      <Project>{3353F69A-B033-AC5A-9EEE-C288E66F7351}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
