@@ -40,6 +40,11 @@ public class DamageHandler : MonoBehaviour {
 	public void DoDamage(Component enemy) {	
 		if (Utility.HealthUtility.DeductHealth(enemy, damage)) {
 			Destroy (enemy.gameObject);
+			XPHandler xpComponent = this.GetComponent<XPHandler>();
+			if (xpComponent != null)
+			{
+				xpComponent.AddXp(10);
+			}
 			Debug.Log ("Destroyed2");
 		}
 		

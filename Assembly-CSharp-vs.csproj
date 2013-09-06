@@ -107,8 +107,11 @@
      <Compile Include="Assets\JimWest\Scripts\HUD\HealthHud.cs" />
      <Compile Include="Assets\JimWest\Scripts\HUD\Hud.cs" />
      <Compile Include="Assets\JimWest\Scripts\HUD\SpeedHud.cs" />
+     <Compile Include="Assets\JimWest\Scripts\HUD\XPHud.cs" />
      <Compile Include="Assets\JimWest\Scripts\Handlers\DamageHandler.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Handlers\DeathRagdollHandler.cs" />
      <Compile Include="Assets\JimWest\Scripts\Handlers\HealthHandler.cs" />
+     <Compile Include="Assets\JimWest\Scripts\Handlers\XPHandler.cs" />
      <Compile Include="Assets\JimWest\Scripts\HurtTest.cs" />
      <Compile Include="Assets\JimWest\Scripts\Library\ExposePropertyAttribute.cs" />
      <Compile Include="Assets\JimWest\Scripts\PlayerControll\RigidPlayerScript.cs" />

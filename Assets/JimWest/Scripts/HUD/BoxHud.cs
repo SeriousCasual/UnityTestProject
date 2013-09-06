@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class BoxHud : Hud
+public abstract class BoxHud : Hud
 {
 	internal Rect rect;
 	internal float width = Screen.width / 3;
@@ -11,15 +11,14 @@ public class BoxHud : Hud
 	
 	public override void Start () {		
 		base.Start();	
-		rect = new Rect(left,top,GetWidth(), 20);
+		rect = new Rect(left,top,GetWidth(), GetHeight());
 		texture = new Texture2D(128, 128);
-		color = new Color(1,0,0,1);
 	}
 	
 	public virtual void OnGUI() {
 		rect.width = GetWidth ();
 		style = GUI.skin.box;
-		GUI.backgroundColor = GetColor();
+		GUI.backgroundColor = this.GetColor();
 		style.normal.background = texture;
 		GUI.Box (rect , GetText(), style);
 	}
@@ -28,13 +27,15 @@ public class BoxHud : Hud
 		return width; 
 	}
 	
+	public virtual float GetHeight() {
+		return 20;
+	}
+	
 	public virtual string GetText() {
 		return ""; 
 	}
 	
-	public virtual Color GetColor() {
-		return color; 
-	}
+	public abstract Color GetColor();
 
 }
 

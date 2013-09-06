@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 [RequireComponent (typeof (Collider))]
 
@@ -19,7 +20,7 @@ public class DeathRagdollHandler : MonoBehaviour {
 	
 	void StartRagdoll()
 	{
-		this.ragdollStopTime = DateTime.Now + this.ragdollStopTime;
+		this.ragdollStopTime = DateTime.Now.AddSeconds(ragdollDuration);
 		
 		// Start ragdolling and suppress input
 	}

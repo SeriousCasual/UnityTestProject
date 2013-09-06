@@ -3,13 +3,18 @@ using System.Collections;
 
 public class HealthHud : BoxHud {	
 	
+	public override Color GetColor()
+	{
+		return new Color(1,0,0,1);
+	}
+	
 	public override float GetWidth() {
 		float tempWidth = width;
-		int maxHealth = Utility.HealthUtility.GetMaxHealth (player);
-		int health = Utility.HealthUtility.GetHealth (player);
+		float maxHealth = Utility.HealthUtility.GetMaxHealth (player);
+		float health = Utility.HealthUtility.GetHealth (player);
 		
 		if (health > 0) {
-			 tempWidth /= ((float)maxHealth / (float)health);
+			 tempWidth /= (maxHealth / health);
 		} else {
 			 tempWidth = 0;
 		}
@@ -18,9 +23,11 @@ public class HealthHud : BoxHud {
 	}
 	
 	public override string GetText (){
-		int maxHealth = Utility.HealthUtility.GetMaxHealth (player);
-		int health = Utility.HealthUtility.GetHealth (player);
-		return ( maxHealth + "/" + health);
+		float maxHealth = Utility.HealthUtility.GetMaxHealth (player);
+		float health = Utility.HealthUtility.GetHealth (player);
+		maxHealth = Mathf.Ceil (maxHealth);
+		health = Mathf.Ceil (health);
+		return ( health + "/" + maxHealth);
 	}
 
 }
