@@ -615,6 +615,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1317802881}
   - 114: {fileID: 1317802883}
+  - 114: {fileID: 1317802882}
   m_Layer: 0
   m_Name: HUD
   m_TagString: Untagged
@@ -634,6 +635,19 @@ Transform:
   m_Children:
   - {fileID: 1610296840}
   m_Father: {fileID: 1920927629}
+--- !u!114 &1317802882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1317802880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b329df3ae4200a41aa859b3ee03c205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  top: 310
+  left: 0
 --- !u!114 &1317802883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -662,6 +676,7 @@ GameObject:
   - 54: {fileID: 1482100234}
   - 114: {fileID: 1482100233}
   - 114: {fileID: 1482100235}
+  - 114: {fileID: 1482100236}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Player
@@ -772,11 +787,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 100
+  dead: 0
   regenHealth: 0
   regenSpeed: 1
   invincible: 0
-  dead: 0
   destroyPrefab: {fileID: 0}
+--- !u!114 &1482100236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1482100228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4923a81a4c2b93347b29fa7f5ddee5c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xp: 0
 --- !u!1 &1580444598
 GameObject:
   m_ObjectHideFlags: 0

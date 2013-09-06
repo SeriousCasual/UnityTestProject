@@ -5,8 +5,9 @@ using System.Collections;
 
 public class HealthHandler : MonoBehaviour {	
 		
-	public int maxHealth = 100;
-	public int health = 100;
+	public float maxHealth = 100;
+	public float health = 100;
+	public bool dead = false;
 	
 	public int regenHealth = 0;
 	public float regenSpeed = 1f;
@@ -47,7 +48,7 @@ public class HealthHandler : MonoBehaviour {
 			this.health = Mathf.Max (this.health - damage, 0);
 		}
 		
-		dead = this.health <= 0;
+		this.dead = this.health <= 0;
 		
 		if (dead & gameObject.tag != "Player") {
 			if (destroyPrefab) {
@@ -58,12 +59,12 @@ public class HealthHandler : MonoBehaviour {
 		}
 			
 		// returns true if died
-		return dead;
+		return this.dead;
 	}
 	
 	public bool GetIsAlive()
 	{
-		return !this.dead
+		return !this.dead;
 	}
 
 }

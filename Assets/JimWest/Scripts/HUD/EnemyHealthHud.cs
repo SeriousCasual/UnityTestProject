@@ -7,11 +7,11 @@ public class EnemyHealthHud : BoxHud {
 		float tempWidth = width;
 		GameObject enemy = GameObject.FindWithTag ("Enemy");
 		
-		int maxHealth = Utility.HealthUtility.GetMaxHealth (enemy);
-		int health = Utility.HealthUtility.GetHealth (enemy);
+		float maxHealth = Utility.HealthUtility.GetMaxHealth (enemy);
+		float health = Utility.HealthUtility.GetHealth (enemy);
 		
 		if (health > 0) {
-			 tempWidth /= ((float)maxHealth / (float)health);
+			 tempWidth /= (maxHealth / health);
 		} else {
 			 tempWidth = 0;
 		}
@@ -21,9 +21,16 @@ public class EnemyHealthHud : BoxHud {
 	
 	public override string GetText (){
 		GameObject enemy = GameObject.FindWithTag ("Enemy");
-		int maxHealth = Utility.HealthUtility.GetMaxHealth (enemy);
-		int health = Utility.HealthUtility.GetHealth (enemy);
+		float maxHealth = Utility.HealthUtility.GetMaxHealth (enemy);
+		float health = Utility.HealthUtility.GetHealth (enemy);
+		maxHealth = Mathf.Ceil (maxHealth);
+		maxHealth = Mathf.Ceil (health);
 		return ( maxHealth + "/" + health);
+	}
+	
+	public override Color GetColor()
+	{
+		return new Color(1,0,0,1);
 	}
 
 }

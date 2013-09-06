@@ -53,19 +53,19 @@ namespace Utility
 			return false;
 		}
 		
-		public static int GetHealth(Component entity) {
+		public static float GetHealth(Component entity) {
 			return 	entity.GetComponent<HealthHandler>().health;		
 		}
 		
-		public static int GetHealth(GameObject entity) {
+		public static float GetHealth(GameObject entity) {
 			return 	entity.GetComponent<HealthHandler>().health;		
 		}
 		
-		public static int GetMaxHealth(Component entity){
+		public static float GetMaxHealth(Component entity){
 				return 	entity.GetComponent<HealthHandler>().maxHealth;
 		}
 		
-		public static int GetMaxHealth(GameObject entity){
+		public static float GetMaxHealth(GameObject entity){
 				return 	entity.GetComponent<HealthHandler>().maxHealth;		
 		}
 		

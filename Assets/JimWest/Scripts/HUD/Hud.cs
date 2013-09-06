@@ -12,6 +12,26 @@ public class Hud: MonoBehaviour {
 		player =  Utility.PlayerUtility.GetPlayer ();	
 	}
 	
+	public virtual float GetTop()
+	{
+		return this.top;
+	}
+	
+	protected void SetTop(float top)
+	{
+		this.top = top;
+	}
+	
+	public virtual float GetLeft()
+	{
+		return left;
+	}
+	
+	protected void SetLeft(float left)
+	{
+		this.left = left;
+	}
+	
 }
 
 
